@@ -41,6 +41,53 @@ npm run dev
 npm run build
 ```
 
+5. Preview production build:
+```bash
+npm run preview
+```
+
+## 🚀 GitHub Pages Deployment
+
+This portfolio is configured for automatic deployment to GitHub Pages. Follow these steps:
+
+### Automatic Deployment (Recommended)
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings on GitHub
+   - Navigate to "Pages" in the left sidebar
+   - Under "Source", select "GitHub Actions"
+
+2. **Push to main branch**:
+   ```bash
+   git add .
+   git commit -m "Deploy to GitHub Pages"
+   git push origin main
+   ```
+
+3. **Access your site**:
+   - Your portfolio will be available at: `https://yourusername.github.io/portofolio/`
+   - The GitHub Action will automatically build and deploy on every push to main
+
+### Manual Deployment
+
+If you prefer manual deployment:
+
+```bash
+# Build for GitHub Pages
+npm run build:github
+
+# The dist folder contains your built files
+# Upload the contents to your hosting provider
+```
+
+### Local Testing of Production Build
+
+To test the GitHub Pages version locally:
+
+```bash
+npm run preview:github
+```
+
 ## 🔧 Configuration
 
 ### Personal Information
