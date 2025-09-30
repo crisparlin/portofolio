@@ -15,7 +15,7 @@ const personalInfo = {
   profileImage: 'https://via.placeholder.com/300x300/1B3C53/D2C1B6?text=IT+Expert',
   socialLinks: [
     { name: 'LinkedIn', url: 'https://linkedin.com/in/yourprofile', icon: 'fab fa-linkedin' },
-    { name: 'GitHub', url: 'https://github.com/yourusername', icon: 'fab fa-github' },
+    { name: 'GitHub', url: 'https://github.com/crisparlin', icon: 'fab fa-github' },
     { name: 'Email', url: 'mailto:contact@example.com', icon: 'fas fa-envelope' },
     { name: 'Phone', url: 'tel:+1234567890', icon: 'fas fa-phone' }
   ]
@@ -25,22 +25,13 @@ const personalInfo = {
 <template>
   <div id="app">
     <Header :name="personalInfo.name" />
-    <Hero 
-      :name="personalInfo.name"
-      :title="personalInfo.title"
-      :description="personalInfo.description"
-      :profile-image="personalInfo.profileImage"
-      :social-links="personalInfo.socialLinks"
-    />
+    <Hero :name="personalInfo.name" :title="personalInfo.title" :description="personalInfo.description"
+      :profile-image="personalInfo.profileImage" :social-links="personalInfo.socialLinks" />
     <About />
     <Services />
     <Portfolio />
     <Contact />
-    <Footer 
-      :name="personalInfo.name"
-      :tagline="personalInfo.title"
-      :social-links="personalInfo.socialLinks"
-    />
+    <Footer :name="personalInfo.name" :tagline="personalInfo.title" :social-links="personalInfo.socialLinks" />
   </div>
 </template>
 
@@ -135,16 +126,16 @@ a {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  
+
   a,
   a:visited {
     text-decoration: underline;
   }
-  
+
   img {
     max-width: 100% !important;
   }
-  
+
   .no-print {
     display: none !important;
   }
