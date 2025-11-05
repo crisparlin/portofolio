@@ -43,7 +43,10 @@
                 <div class="hero-image animate-slide-in">
                     <div class="image-container">
                         <div class="image-placeholder">
-                            <i class="fas fa-user-tie"></i>
+                            <!-- <i class="fas fa-user-tie"></i> -->
+                            <img
+                                src="../assets/profile.jpeg"
+                                alt="Cris Parlindungan Panjaitan" />
                         </div>
 
                         <!-- Dynamic Tech Badges -->
@@ -367,6 +370,14 @@ const techBadges = ref([
   animation: float 6s ease-in-out infinite;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 @keyframes float {
